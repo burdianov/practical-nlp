@@ -9,3 +9,7 @@ soupified = BeautifulSoup(html, "html.parser")
 question = soupified.find("div", {"id": "question-header"})
 question_text = question.find("a", {"class": "question-hyperlink"})
 print("Question: \n", question_text.get_text().strip())
+
+answer = soupified.find("div", {"class": "accepted-answer"})
+answer_text = answer.find("div", {"class": "s-prose"})
+print("Best answer: \n", answer_text.get_text().strip())
