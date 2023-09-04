@@ -1,2 +1,6 @@
 ipykernel
 bs4
+pytesseract
+pillow
+nltk
+spacy
